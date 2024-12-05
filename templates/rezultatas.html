@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Rezultatas{% endblock %}
+
+{% block content %}
+{% if ar_keliamieji %}
+<h1>{{ metai }} metai yra KELIAMIEJI</h1>
+{% else %}
+<h1>{{ metai }} metai yra NEKELIAMIEJI</h1>
+{% endif %}
+{% endblock %}

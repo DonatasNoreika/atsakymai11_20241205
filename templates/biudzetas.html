@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Biudžetas{% endblock %}
+
+{% block content %}
+<h1>Įveskite pajamas/išlaidas (+/-):</h1>
+<form action="" method="post">
+    <div class="mb-3 mt-3">
+    <label for="suma" class="form-label">Suma:</label>
+    <input type="text" class="form-control" name="suma" id="suma"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Įvesti</button>
+</form>
+<hr>
+<h1>Balansas: {{ balansas }}</h1>
+<hr>
+<h1>Įrašai:</h1>
+{% for irasas in zurnalas %}
+<p>{{ irasas }}</p>
+{% endfor %}
+{% endblock %}
